@@ -1,12 +1,27 @@
 #coding:utf-8
+#######################
+#
+#
+#
+#单个图像修改
+#一个病人一幅图像
+#
+#
+#
+#
+######################
+
+
+
+
 import dicom
 import os
 
 if __name__ == '__main__':
-    images_path = r'F:\images\6\1'  
+    images_path = r'F:\python\统计图像\client\1222333333333333332017082403002'  
     images = 0
     num = 2017072700001
-    checkNo = 1707270001
+    checkNo = 1709080003
     for root, dirs, files in os.walk(images_path):
         images_cnt = 0
         for filename in files:
@@ -14,7 +29,7 @@ if __name__ == '__main__':
             if filename.endswith('.dcm'):
                 filepath = os.path.join(root, filename)
                 ds = dicom.read_file(filepath)
-                ds.PatientName = "patient"+str(num)
+                ds.PatientName = "patient_"+str(checkNo)
                 ds.StudyInstanceUID ="100651."+str(checkNo)
                 ds.PatientID = "p"+str(checkNo)
                 ds.SeriesInstanceUID = "0124"+str(checkNo)
