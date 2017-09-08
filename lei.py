@@ -1,0 +1,1 @@
+ '{:>10s} {:>10s}'.format('Hello', 'World')
