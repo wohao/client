@@ -20,7 +20,7 @@ if __name__ == '__main__':
        
         if files:
             images_cnt = 0  #单文件图像数目统计
-            filedirs = "./122233333333333333"+str(checkNo) #新建文件路径
+            filedirs = "./1222333333333333"+str(checkNo) #新建文件路径
             #print(filedirs)
             os.mkdir(filedirs)
             i =0
